@@ -15,7 +15,7 @@ module.exports.doCreate = (req, res, next) => {
   console.log(celebrity);
 
   celebrity.save()
-    .then((celebrity) => { res.redirect('/celebrities' )});
+    .then(celebrity => { res.redirect('/celebrities' )});
 }
 
 module.exports.get = (req, res, next) => {

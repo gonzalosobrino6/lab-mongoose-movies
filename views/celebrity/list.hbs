@@ -4,7 +4,8 @@
  {{#each celebrities as |celebrity| }}
  <li>
    {{ celebrity.name }}
-   <a href="celebrities/:id">See full profile</a>
+   <a href="celebrities/{{celebrity.id}}">See full profile</a>
  </li>
  {{/each}}
+ 
 </ul>
