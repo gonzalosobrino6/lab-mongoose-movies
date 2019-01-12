@@ -2,6 +2,9 @@
 
 <ul>  
  {{#each celebrities as |celebrity| }}
- <li> {{ celebrity.name }}</li>
+ <li>
+   {{ celebrity.name }}
+   <a href="celebrities/:id">See full profile</a>
+ </li>
  {{/each}}
 </ul>

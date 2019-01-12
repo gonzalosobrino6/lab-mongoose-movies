@@ -12,9 +12,10 @@ module.exports.create = (req, res, next) => {
 
 module.exports.doCreate = (req, res, next) => {
   const celebrity = new Celebrity(req.body);
+  console.log(celebrity);
 
   celebrity.save()
-    .then((celebrity) => { res.redirect('/celebrity' )});
+    .then((celebrity) => { res.redirect('/celebrities' )});
 }
 
 module.exports.get = (req, res, next) => {
