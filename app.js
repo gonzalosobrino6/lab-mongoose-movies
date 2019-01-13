@@ -5,6 +5,7 @@ const hbs = require("hbs");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 const celebritiesRoutes = require("./routes/celebrity.routes.js");
+const moviesRoutes = require("./routes/movie.routes.js");
 
 const app = express();
 
@@ -19,5 +20,6 @@ hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static(__dirname + "/public"));
 
 app.use("/celebrities", celebritiesRoutes);
+app.use("/movies", moviesRoutes);
 
 app.listen(PORT, () => console.info(`app listen at ${PORT} port`));

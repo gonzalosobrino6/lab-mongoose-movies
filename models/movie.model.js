@@ -1,25 +1,17 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  isbn: {
+  title: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  author: {
+  genre: {
     type: String,
     required: true,
   },
-  description: {
-    type: String
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+  plot: {
+    type: String,
+    required: true,
   }
 }, {
   timestamps: true
